@@ -1,0 +1,216 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #de9898;
+}
+.thumbnail-gallery img {
+    width: 300;
+    height: 300px;
+    object-fit: cover;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s, border-color 0.3s;
+}
+
+
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Header Styling --- */
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #007bff; 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    padding: 0 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* --- Hero Section Styling --- */
+.hero {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hero .subtitle {
+    font-size: 1.25em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    background-color: #007bff; /* Primary Blue */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-bottom: 10px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.small-print {
+    color: #888;
+    font-size: 0.9em;
+}
+
+/* --- Features Section Styling --- */
+.features {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.2em;
+    margin-bottom: 50px;
+    color: #100101;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.feature-item {
+    flex-basis: calc(33.333% - 20px); /* 3 items per row, accounting for gap */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    text-align: center;
+}
+
+.feature-item .icon {
+    font-size: 2.5em;
+    color: #28a745; /* Secondary Green Color */
+    margin-bottom: 15px;
+}
+
+.feature-item h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #343a40; /* Dark Footer */
+    color: white;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a {
+    color: white;
+    margin-left: 15px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+/* --- Responsive Adjustments (Media Query) --- */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero h1 {
+        font-size: 2.2em;
+    }
+    
+    header .container {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    nav ul li a {
+        padding: 5px 10px;
+    }
+    
+    .feature-grid {
+        flex-direction: column; /* Stacks features vertically on small screens */
+    }
+
+    .feature-item {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 10px;
+    }
+}
